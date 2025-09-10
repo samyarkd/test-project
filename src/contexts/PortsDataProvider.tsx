@@ -54,7 +54,6 @@ export function PortsDataProvider({ children }: PropsWithChildren) {
   }, [selectedPortId, ports]);
 
   // Select Port
-  // React guarantees setState functions are stable, so the dependency array can be empty.
   const selectPort = useCallback((id: number | null) => {
     setSelectedPortId(id);
   }, []);

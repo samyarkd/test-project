@@ -1,3 +1,7 @@
+/**
+ * MOCK DATA
+ */
+
 import type { PortWithActivities } from "~/types/port.types";
 
 export const portData: PortWithActivities[] = [
