@@ -24,7 +24,7 @@ const initialSelectedPortId: number | null = null;
  * - selectPort(id)
  */
 export function PortsDataProvider({ children }: PropsWithChildren) {
-  const [ports, setPorts] = useState(portData.map(validatePortActivities));
+  const [ports, setPorts] = useState(portData.map(fixPortActivities));
 
   const summaries = useMemo<PortSummary[]>(
     () => ports.map((p) => ({ key: p.id, id: p.id, name: p.name })),
