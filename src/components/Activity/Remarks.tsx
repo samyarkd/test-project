@@ -1,11 +1,11 @@
-import { Input } from "antd";
+import TextArea from "antd/es/input/TextArea";
 import { usePorts } from "~/hooks/usePorts";
 import type { PortActivityEvent } from "~/types/port.types";
 
 const Remarks = (props: { activity: PortActivityEvent }) => {
   const { updateActivity } = usePorts();
   return (
-    <Input
+    <TextArea
       defaultValue={props.activity.remarks}
       placeholder="A description"
       onChange={(e) => {

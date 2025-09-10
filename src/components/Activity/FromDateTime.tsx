@@ -9,10 +9,20 @@ const FromDateTime = (props: { activity: PortActivityEvent }) => {
   return (
     <DatePicker
       showTime
-      value={dayjs(props.activity.fromDateTime)}
+      value={
+        props.activity.fromDateTime
+          ? dayjs(props.activity.fromDateTime)
+          : undefined
+      }
       style={{ width: "100%" }}
       onChange={(date) => {
-        updateActivity({ ...props.activity, fromDateTime: date.toDate() });
+        updateActivity({
+          ...props.activity,
+          fromDateTime: date.toDate(),
+          toDateTime: !props.activity.toDateTime
+            ? date.toDate()
+            : props.activity.toDateTime,
+        });
       }}
     />
   );
