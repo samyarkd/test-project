@@ -92,6 +92,7 @@ export function deleteActivityFromPort(
   const updatedActivities = port.activities.filter(
     (activity) => activity.id !== id,
   );
+
   return {
     ...port,
     activities: updatedActivities,

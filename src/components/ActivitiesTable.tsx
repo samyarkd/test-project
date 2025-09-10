@@ -26,13 +26,15 @@ const columns: TableColumnsType<PortActivityEvent> = [
     title: "Activity Type",
     dataIndex: "activityType",
     key: "activityType",
-    render: (_, record) => <SelectActivityType activity={record} />,
+    render: (_, record) => (
+      <SelectActivityType key={record.id} activity={record} />
+    ),
   },
   {
     title: "From Date & Time",
     dataIndex: "fromDateTime",
     key: "fromDateTime",
-    render: (_, record) => <FromDateTime activity={record} />,
+    render: (_, record) => <FromDateTime key={record.id} activity={record} />,
   },
   {
     title: "Duration (hrs)",
@@ -47,7 +49,9 @@ const columns: TableColumnsType<PortActivityEvent> = [
     title: "%",
     dataIndex: "percent",
     key: "percent",
-    render: (_, record) => <CompletePercent activity={record} />,
+    render: (_, record) => (
+      <CompletePercent key={record.id} activity={record} />
+    ),
   },
   {
     title: "To Date & Time",
@@ -59,7 +63,7 @@ const columns: TableColumnsType<PortActivityEvent> = [
     title: "Remarks",
     dataIndex: "remarks",
     key: "remarks",
-    render: (_, record) => <Remarks activity={record} />,
+    render: (_, record) => <Remarks key={record.id} activity={record} />,
   },
   {
     title: "Deductions (hrs)",

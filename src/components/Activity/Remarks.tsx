@@ -4,6 +4,7 @@ import type { PortActivityEvent } from "~/types/port.types";
 
 const Remarks = (props: { activity: PortActivityEvent }) => {
   const { updateActivity } = usePorts();
+
   return (
     <TextArea
       defaultValue={props.activity.remarks}
