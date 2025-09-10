@@ -1,15 +1,26 @@
-import { Flex } from "antd";
+import { Flex, Spin } from "antd";
+import React, { Suspense } from "react";
 
-import ActivitiesTable from "./components/ActivitiesTable";
-import PortsTable from "./components/PortsTable";
+const ActivitiesTable = React.lazy(
+  () => import("./components/ActivitiesTable"),
+);
+const PortsTable = React.lazy(() => import("./components/PortsTable"));
 
 function Page() {
   return (
     <Flex vertical gap="middle">
-      {/* Ports */}
-      <PortsTable />
-      {/* Events */}
-      <ActivitiesTable />
+      <Suspense
+        fallback={
+          <Flex align="center" vertical gap="middle">
+            <Spin tip="Loading" size="small" />
+          </Flex>
+        }
+      >
+        {/* Ports */}
+        <PortsTable />
+        {/* Events */}
+        <ActivitiesTable />
+      </Suspense>
     </Flex>
   );
 }
