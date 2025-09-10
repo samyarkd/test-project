@@ -1,0 +1,13 @@
+.note {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.note::before {
+  display: inline-block;
+  content: "";
+  width: 0.25rem;
+  height: 1lh;
+  background-color: aqua;
+  border-radius: 0.5rem;
+}

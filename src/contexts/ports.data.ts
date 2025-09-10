@@ -1,0 +1,117 @@
+import type { PortWithActivities } from "~/types/port.types";
+
+export const portData: PortWithActivities[] = [
+  {
+    id: 1,
+    name: "Rotterdam 🇳🇱",
+    activities: [
+      {
+        id: 1,
+        activityType: "Loading",
+        fromDateTime: new Date("2025-09-10T08:00:00Z"),
+        toDateTime: new Date("2025-09-10T12:00:00Z"),
+        percent: 100,
+        remarks: "Container loading completed on schedule",
+        uiState: { isFirstRow: true },
+      },
+      {
+        id: 2,
+        activityType: "Inspection",
+        fromDateTime: new Date("2025-09-10T12:30:00Z"),
+        toDateTime: new Date("2025-09-10T14:00:00Z"),
+        percent: 50,
+        remarks: "Random customs inspection",
+      },
+      {
+        id: 3,
+        activityType: "Unloading",
+        fromDateTime: new Date("2025-09-11T07:00:00Z"),
+        toDateTime: new Date("2025-09-11T11:00:00Z"),
+        percent: 100,
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Singapore 🇸🇬",
+    activities: [
+      {
+        id: 4,
+        activityType: "Berthing",
+        fromDateTime: new Date("2025-09-09T06:00:00Z"),
+        toDateTime: new Date("2025-09-09T07:00:00Z"),
+        percent: 100,
+        uiState: { isFirstRow: true },
+      },
+      {
+        id: 5,
+        activityType: "Bunkering",
+        fromDateTime: new Date("2025-09-09T07:30:00Z"),
+        toDateTime: new Date("2025-09-09T09:00:00Z"),
+        percent: 50,
+        remarks: "Fueling delayed due to weather",
+      },
+      {
+        id: 6,
+        activityType: "Waiting",
+        fromDateTime: new Date("2025-09-10T10:00:00Z"),
+        toDateTime: new Date("2025-09-10T15:00:00Z"),
+        percent: 0,
+        remarks: "Awaiting berth availability",
+        uiState: { needsAdjustment: true },
+      },
+      {
+        id: 7,
+        activityType: "Unberthing",
+        fromDateTime: new Date("2025-09-11T08:00:00Z"),
+        toDateTime: new Date("2025-09-11T09:30:00Z"),
+        percent: 100,
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Los Angeles 🇺🇸",
+    activities: [
+      {
+        id: 8,
+        activityType: "Maintenance",
+        fromDateTime: new Date("2025-09-08T09:00:00Z"),
+        toDateTime: new Date("2025-09-08T11:00:00Z"),
+        percent: 50,
+        remarks: "Crane maintenance",
+        uiState: { isFirstRow: true },
+      },
+      {
+        id: 9,
+        activityType: "Loading",
+        fromDateTime: new Date("2025-09-08T11:30:00Z"),
+        toDateTime: new Date("2025-09-08T16:30:00Z"),
+        percent: 100,
+        remarks: "Steel cargo",
+      },
+      {
+        id: 10,
+        activityType: "Waiting",
+        fromDateTime: new Date("2025-09-09T07:00:00Z"),
+        toDateTime: new Date("2025-09-09T12:00:00Z"),
+        percent: 0,
+        remarks: "Dock congestion",
+      },
+      {
+        id: 11,
+        activityType: "Inspection",
+        fromDateTime: new Date("2025-09-10T10:00:00Z"),
+        toDateTime: new Date("2025-09-10T11:00:00Z"),
+        percent: 100,
+      },
+      {
+        id: 12,
+        activityType: "Unloading",
+        fromDateTime: new Date("2025-09-11T08:00:00Z"),
+        toDateTime: new Date("2025-09-11T13:00:00Z"),
+        percent: 100,
+      },
+    ],
+  },
+];
